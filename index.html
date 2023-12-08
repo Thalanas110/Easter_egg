@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>Bucket List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #f9464f;
+            font-size: 75px;
+        }
+
+        #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url("images/animebg.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table td, .table th {
+            border: none;
+            padding: 8px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .clock {
+            font-size: 35px;
+            color: #333;
+            padding-left: -70px;
+        }
+
+        /* Center the content in the second row */
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .col-md-4,
+        .col-md-8 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <h1 class="text-center">&nbsp;&nbsp;Bucket List</h1>
+        <div class="col-md-4">
+            <div id="MyClockDisplay" class="clock"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Item</th>
+                            <th>Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Visit Roselyn</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Buy a car</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Get a new laptop for both programming and gaming</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Go to Palawan</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Fly a plane myself in real life</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Graduate from College</td>
+                            <td>No, ongoing</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Recover from depression</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function showTime() {
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+
+    if (h == 0) {
+        h = 12;
+    }
+
+    if (h > 12) {
+        h = h - 12;
+    }
+
+    if (h < 10) {
+        h = "0" + h;
+    }
+
+    if (m < 10) {
+        m = "0" + m;
+    }
+
+    if (s < 10) {
+        s = "0" + s;
+    }
+
+    var time = h + ":" + m + ":" + s;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+
+    setTimeout(showTime, 1000);
+
+}
+
+showTime();
+</script>
+
+</body>
+</html>
