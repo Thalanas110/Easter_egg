@@ -1,8 +1,8 @@
 *{
-    margin: 0;
     padding: 0;
     font-family: 'lucida sans unicode', sanf-serif;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 h1 {
@@ -16,9 +16,8 @@ h1 {
     border-radius: 20px;
     text-align: left;
     width: 60%;
-    position: relative;
-    margin-left: 348px;
- }
+    
+}
 
 body {
     background-image: url('images/background.jpg');
@@ -31,6 +30,7 @@ body {
 .container {
     max-width: 1000px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .ul li {
