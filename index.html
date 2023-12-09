@@ -1,163 +1,91 @@
 <html>
-<head>
-    <title>Bucket List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            color: #f9464f;
-            font-size: 75px;
-        }
-
-        #header {
-            width: 100%;
-            height: 100vh;
-            background-image: url("images/animebg.jpg");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .table td, .table th {
-            border: none;
-            padding: 8px;
-            font-size: 40px;
-            text-align: center;
-        }
-
-        .table th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-        }
-
-        .clock {
-            font-size: 35px;
-            color: #333;
-            padding-left: -70px;
-        }
-
-        /* Center the content in the second row */
-        .row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .col-md-4,
-        .col-md-8 {
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-<div id="header">
-    <div class="container">
-        <h1 class="text-center">&nbsp;&nbsp;Bucket List</h1>
-        <div class="col-md-4">
-            <div id="MyClockDisplay" class="clock"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Item</th>
-                            <th>Completed</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Visit Roselyn</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Buy a car</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Get a new laptop for both programming and gaming</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Go to Palawan</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Fly a plane myself in real life</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Graduate from College</td>
-                            <td>No, ongoing</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Recover from depression</td>
-                            <td>Yes</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DIMATE_FinalsTwo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <div id="container">
+                <h1>My Bucket List for 2023-2040</h1>
             </div>
-        </div>
-    </div>
-</div>
+            <div id="clock"></div>
+            <div id="list1">
+                <div class="container">
+                    <div class="transparent-box">
+                        <h2>Personal Objectives</h2>
+                        <li><s>Complete Senior High School with flying colors</s></li>
+                        <li><s>Be able to survive Major Depressive Disorder</s></li>
+                        <li>Finish the 8-year college journey at any cost</li>
+                        <li>Meet my girlfriend Roselyn face-to-face</li>
+                        <li>Find a source of income</li>
+                    </div>
+                </div>
+            </div>
+        <br>
+            <div id="list2">
+                <div class="container">
+                    <div class="transparent-box">
+                        <h2>Academic Objectives</h2>
+                        <li><s>Be able to finish all projects well before the deadline</s></li>
+                        <li>Begin the Research Offensive as a preemptive strike to send Ma'am Abarintos' command into shock</li>
+                        <li><s>Try get a 98 even in just one college course</s></li>
+                        <li><s>Be able to de-rust and exploit former sit-ins in 2012 for Programming 1 and 2</s></li>
+                        <li>Learn backend development to preemptively strike one of the planned electives</li>
+                        <li>Build a project out of Assembly for a thesis</li>
+                    </div>
+                </div>
+            </div>
+        <br>
+            <div id="list3">
+                <div class="container">
+                    <div class="transparent-box">
+                        <h2>Extremes/NSFW</h2>
+                        <p>WARNING: These are expected to be done near or post marriage.</p>
+                        <li>Be able to experience actual rope bondage in an intimate manner while wearing a uniform</li>
+                        <li>Try skydiving</li>
+                        <li>Climb at least 2 eight-thousanders, all in the Himalayas</li>
+                        <li>Visit North Korea and escape from there</li>
+                        <li>Experience tying up someone in uniform</li>
+                        <li><s>Enter the Dark Web</s></li>
+                    </div>
+                </div>
+            </div>
+        <br>
+            <div id="list4">
+                <div class="container">
+                    <div class="transparent-box">
+                        <h2>Dating, Lovelife and Family-building</h2>
+                        <li>Be able to marry my girlfriend Roselyn.</li>
+                        <li><s>Fully legalize the relationship between me and Roselyn.</s></li>
+                        <li>Save up for an international trip of 2 to the City of Sapporo in Hokkaido Island, State of Japan.</li>
+                        <li>Bring Roselyn her first baby, when the time is right and when financial conditions permit</li>
+                    </div>
+                </div>
+            </div>
+    
+        <script>
+            function startTime() 
+            {
+            let today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+            let t = setTimeout(startTime, 500);
+            }
 
-<script>
-function showTime() {
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
+            function checkTime(i) 
+            {
+            if (i < 10) {i = "0" + i};
+            return i;
+            }
 
-    if (h == 0) {
-        h = 12;
-    }
+            startTime();
+        </script>
 
-    if (h > 12) {
-        h = h - 12;
-    }
-
-    if (h < 10) {
-        h = "0" + h;
-    }
-
-    if (m < 10) {
-        m = "0" + m;
-    }
-
-    if (s < 10) {
-        s = "0" + s;
-    }
-
-    var time = h + ":" + m + ":" + s;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-
-    setTimeout(showTime, 1000);
-
-}
-
-showTime();
-</script>
-
-</body>
+    </body>
 </html>
