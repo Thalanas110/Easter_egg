@@ -44,8 +44,3 @@ This project contains personal goals. The README intentionally lists only the ca
 
 Owner: Adriaan Dimate
 
-If you want, I can now:
-
-- Add auto-close on menu links (mobile)
-- Animate the hamburger icon into an X
-- Add keyboard accessibility improvements
