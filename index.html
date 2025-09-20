@@ -1,84 +1,109 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MORALES_FinalsTwo</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="row">
-            <section id="bucket-col-1">
-                <div class="container">
-                    <div class="hero">
-                        <div>
-                            <h1>My Bucket List for 2023-2040</h1>
-                            <h3 class="list-note">Note: Striked points are completed.</h3>
-                        </div>
-                        <div class="chip">Goals • 2023–2040</div>
-                    </div>
-                </div>
-                <div id="clock" class="clock animated" aria-live="polite"></div>
-                <div id="list1">
-                    <div class="container">
-                        <div class="transparent-box">
-                            <h2>Personal Objectives</h2>
-                            <ul>
-                                <li class="completed"><s>Complete Senior High School with flying colors</s></li>
-                                <li class="completed"><s>Be able to survive Major Depressive Disorder</s></li>
-                                <li>Finish the 16-year college journey at any cost</li>
-                                <li>Be able to become a strong independent person with Soviet foreign policy</li>
-                                <li>Find a source of income</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="list2">
-                    <div class="container">
-                        <div class="transparent-box">
-                            <h2>Academic Objectives</h2>
-                            <ul>
-                                <li class="completed"><s>Be able to finish all projects well before the deadline</s></li>
-                                <li class="completed"><s>Begin the Research Offensive as a preemptive strike to send Ma'am Abarintos' command into shock</s></li>
-                                <li class="completed"><s>Try get a 98 even in just one college course</s></li>
-                                <li class="completed"><s>Be able to de-rust and exploit former sit-ins in 2012 for Programming 1 and 2</s></li>
-                                <li>Learn backend development to preemptively strike one of the planned electives</li>
-                                <li>Build a project out of Assembly for a thesis</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="list3">
-                    <div class="container">
-                        <div class="transparent-box">
-                            <h2>Extremes/NSFW</h2>
-                            <p>WARNING: These are expected to be done near or post marriage.</p>
-                            <ul>
-                                <li>Be able to experience being tied up and tying up someone in an intimate manner while wearing a uniform</li>
-                                <li>Try skydiving</li>
-                                <li>Climb at least 2 eight-thousanders, all in the Himalayas</li>
-                                <li>Visit North Korea and escape from there</li>
-                                <li class="completed"><s>Enter the Dark Web</s></li>
-                        </div>
-                    </div>
-                </div>
-            <br>
-                <div id="list4">
-                    <div class="container">
-                        <div class="transparent-box">
-                            <h2>Dating, Lovelife and Family-building</h2>
-                            <ul>
-                                <li>Be able to find and marry my would be girlfriend.</li>
-                                <li>Fully legalize the relationship between me and my would be girlfriend.</li>
-                                <li>Save up for an international trip of 2 to the City of Sapporo in Hokkaido Island, State of Japan.</li>
-                                <li>Bring my would be girlfriend her first baby, when the time is right and when financial conditions permit</li>
-                                <li>Save up to be able to buy our first car and first house together</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <script src="clockscript.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BucketList.exe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header class="app-header">
+        <nav class="navbar" aria-label="Main navigation">
+          <div class="navbar__logo">
+            <img src="images/animebg.jpg" alt="Avatar" class="navbar__avatar" />
+            <span class="navbar__title">BucketList.exe</span>
+          </div>
+
+          <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-links">
+            <span class="sr-only"></span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <ul id="navbar-links" class="navbar__links">
+            <li><a href="#list1">Personal</a></li>
+            <li><a href="#list2">Academic</a></li>
+            <li><a href="#list3">Extremes</a></li>
+            <li><a href="#list4">Family</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="app-main">
+        <section class="hero-card">
+          <h1 class="hero-card__title">My Bucket List for 2023-2040</h1>
+          <h3 class="hero-card__note">Note: Striked points are completed.</h3>
+          <div class="hero-card__chip">Goals • 2023–2040</div>
+        </section>
+
+        <div id="clock" class="clock animated" aria-live="polite"></div>
+
+        <section id="list1" class="card card--personal">
+          <h2 class="card__title">Personal Objectives</h2>
+          <ul class="card__list">
+            <li class="card__item completed"><s>Complete Senior High School with flying colors</s></li>
+            <li class="card__item completed"><s>Be able to survive Major Depressive Disorder</s></li>
+            <li class="card__item">Finish the 16-year college journey at any cost</li>
+            <li class="card__item">Be able to become a strong independent person with Soviet foreign policy</li>
+            <li class="card__item">Find a source of income</li>
+          </ul>
+        </section>
+
+        <section id="list2" class="card card--academic">
+          <h2 class="card__title">Academic Objectives</h2>
+          <ul class="card__list">
+            <li class="card__item completed"><s>Be able to finish all projects well before the deadline</s></li>
+            <li class="card__item completed"><s>Begin the Research Offensive as a preemptive strike to send Ma'am Abarintos' command into shock</s></li>
+            <li class="card__item completed"><s>Try get a 98 even in just one college course</s></li>
+            <li class="card__item completed"><s>Be able to de-rust and exploit former sit-ins in 2012 for Programming 1 and 2</s></li>
+            <li class="card__item">Learn backend development to preemptively strike one of the planned electives</li>
+            <li class="card__item">Build a project out of Assembly for a thesis</li>
+          </ul>
+        </section>
+
+        <section id="list3" class="card card--extremes">
+          <h2 class="card__title">Extremes/NSFW</h2>
+          <p class="card__warning">WARNING: These are expected to be done near or post marriage.</p>
+          <ul class="card__list">
+            <li class="card__item">Be able to experience being tied up and tying up someone in an intimate manner while wearing a uniform</li>
+            <li class="card__item">Try skydiving</li>
+            <li class="card__item">Climb at least 2 eight-thousanders, all in the Himalayas</li>
+            <li class="card__item">Visit North Korea and escape from there</li>
+            <li class="card__item completed"><s>Enter the Dark Web</s></li>
+          </ul>
+        </section>
+
+        <section id="list4" class="card card--family">
+          <h2 class="card__title">Dating, Lovelife and Family-building</h2>
+          <ul class="card__list">
+            <li class="card__item">Be able to find and marry my would be girlfriend.</li>
+            <li class="card__item">Fully legalize the relationship between me and my would be girlfriend.</li>
+            <li class="card__item">Save up for an international trip of 2 to the City of Sapporo in Hokkaido Island, State of Japan.</li>
+            <li class="card__item">Bring my would be girlfriend her first baby, when the time is right and when financial conditions permit</li>
+            <li class="card__item">Save up to be able to buy our first car and first house together</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <span>© 2025 Adriaan Dimate. All rights reserved. </span>
+      </footer>
+    </div>
+
+    <script src="clockscript.js"></script>
+    <script>
+      (function () {
+        const btn = document.querySelector('.navbar__toggle');
+        const links = document.getElementById('navbar-links');
+        btn && btn.addEventListener('click', function () {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          links.classList.toggle('is-open');
+        });
+      })();
+    </script>
+  </body>
 </html>

@@ -1,3 +1,33 @@
+.app-footer {
+    width: 100%;
+    background: rgba(0,0,0,0.92);
+    color: #ffd166;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 700px) {
+    .app-main {
+        padding: 0 0.5rem;
+    }
+    .hero-card {
+        padding: 1rem 0.5rem;
+    }
+    .card {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+    }
+    .navbar__title {
+        font-size: 1.1rem;
+    }
+    .navbar__avatar {
+        width: 32px;
+        height: 32px;
+    }
+}
 *{
     padding: 0;
     font-family: 'lucida sans unicode', sans-serif;
@@ -8,6 +38,205 @@
     --glass-2: rgba(255,255,255,0.03);
 }
 
+.app-main {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.hero-card__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #ffd166;
+    margin-bottom: 0.5rem;
+}
+.hero-card__note {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.hero-card__chip {
+    display: inline-block;
+    background: #ffd166;
+    color: #222;
+    font-weight: 700;
+    border-radius: 16px;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.card {
+    background: rgba(0,0,0,0.86);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+}
+.card__title {
+    font-size: 1.3rem;
+    color: #ffd166;
+    margin-bottom: 0.75rem;
+}
+.card__list {
+    padding-left: 1.2rem;
+}
+.card__item {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    list-style: disc inside;
+    transition: color 0.2s;
+}
+.card__item.completed s {
+    color: #aaa;
+}
+.card__warning {
+    color: #ff4d4d;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.app-footer {
+    width: 100%;
+    background: rgba(0,0,0,0.92);
+    color: #ffd166;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.18);
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(0,0,0,0.04);
+}
+
+.app-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 120;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+}
+.navbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.navbar__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.navbar__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #ffd166;
+    font-weight: 700;
+}
+.navbar__links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+.navbar__links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.navbar__links a:hover {
+    color: #ffd166;
+}
+/* Hamburger button (hidden on desktop) */
+.navbar__toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: 12px;
+}
+.navbar__toggle svg { display: block; }
+
+/* Mobile styles: collapse links into a dropdown */
+@media (max-width: 720px) {
+    .navbar__links {
+        position: absolute;
+        top: 64px;
+        right: 12px;
+        background: rgba(0,0,0,0.92);
+        border-radius: 12px;
+        flex-direction: column;
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        transform-origin: top right;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.95);
+        transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
+        z-index: 60;
+    }
+    .navbar__links.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    .navbar__toggle { display: inline-flex; }
+    .navbar__links { display: flex; }
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 .transparent-box {
@@ -68,6 +297,11 @@ body {
     gap: 2rem;
     width: 100%;
     margin-top: 2rem;
+}
+
+/* Make sure content doesn't sit under the sticky header on very small screens */
+@media (max-width: 480px) {
+    .app-main { padding-top: 0.5rem; }
 }
 
 #bucket-col-1 {
