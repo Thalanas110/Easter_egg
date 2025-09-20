@@ -1,13 +1,14 @@
 *{
     padding: 0;
-    font-family: 'lucida sans unicode', sanf-serif;
+    font-family: 'lucida sans unicode', sans-serif;
     box-sizing: border-box;
     margin: 0 auto;
+    --accent-2: #ffd166;
+    --glass: rgba(255,255,255,0.06);
+    --glass-2: rgba(255,255,255,0.03);
 }
 
-h1 {
-    color:rgb(182, 24, 24);
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 .transparent-box {
     background-color: rgba(0, 0, 0, 0.86); 
@@ -50,7 +51,139 @@ body {
     flex-basis: 60%;
 }
 
+.bucket-col-2 .transparent-box{transition:transform 260ms ease,box-shadow 260ms ease}
+.bucket-col-2 .transparent-box:hover{transform:translateY(-6px);box-shadow:0 26px 60px rgba(0,0,0,0.45)}
+
 .bucket-col-2 img{
     width: 5%;
     border-radius: 23px;
+}
+
+/* --- IMPROVED STYLES & RESPONSIVENESS --- */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#bucket-col-1 {
+    flex: 1 1 400px;
+    min-width: 280px;
+    max-width: 600px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 1.5rem;
+}
+
+#clock {
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(182,24,24,0.8);
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: inline-block;
+}
+
+.transparent-box {
+    background-color: rgba(0, 0, 0, 0.86);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.transparent-box h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    color: #ffd700;
+}
+
+.transparent-box li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    list-style: disc inside;
+}
+
+.transparent-box s {
+    color: #aaa;
+}
+
+h1, h3 {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    #bucket-col-1 {
+        max-width: 98vw;
+        padding: 1rem;
+    }
+    .container {
+        max-width: 98vw;
+        padding: 0.5rem;
+    }
+    .transparent-box {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    #clock {
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    @media (max-width: 900px) {
+        .row {
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        #bucket-col-1 {
+            max-width: 98vw;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 98vw;
+            padding: 0.5rem;
+        }
+        .transparent-box {
+            padding: 1rem;
+            font-size: 1rem;
+        }
+        #clock {
+            font-size: 1.3rem;
+            padding: 0.5rem 1rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 420px) {
+        h1 { font-size: 1.25rem; }
+        .transparent-box li { font-size: 0.95rem; }
+        .chip { padding: 0.25rem 0.6rem; }
+    }
+    h3 {
+        font-size: 1rem;
+    }
 }

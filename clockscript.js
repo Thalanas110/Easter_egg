@@ -1,20 +1,24 @@
-function startTime()
-{
-    let today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
+function pad(n){return n<10?('0'+n):n}
 
-    document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
-        let t = setTimeout(startTime, 500);
+function updateClock(){
+    const el = document.getElementById('clock');
+    if(!el) return;
+    const now = new Date();
+    const h = pad(now.getHours());
+    const m = pad(now.getMinutes());
+    const s = pad(now.getSeconds());
+    el.textContent = `${h}:${m}:${s}`;
+    el.setAttribute('aria-live', 'polite'); // Apply aria-live for accessibility
 }
 
-function checkTime(i)
-{
-    if (i < 10) {i = "0" + i};
-    return i;
+// Update once per second, aligned to the next second for accuracy
+function startClock(){
+    updateClock();
+    const msToNext = 1000 - (Date.now() % 1000);
+    setTimeout(function(){
+        updateClock();
+        setInterval(updateClock, 1000);
+    }, msToNext);
 }
 
-startTime();
+startClock();
